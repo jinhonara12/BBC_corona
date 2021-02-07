@@ -1,16 +1,67 @@
 html {
-	font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 body {
-	margin: 0;
+  margin: 0;
 }
-div, section, header, footer, p, h1, h2 {
-	box-sizing: border-box;
+div,
+section,
+header,
+footer,
+p,
+h1,
+h2 {
+  box-sizing: border-box;
 }
 a {
-	color: royalblue;
+  color: royalblue;
 }
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
+}
+.global-width {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.graphic-item {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s;
+}
+.visible {
+  opacity: 1;
+}
+.scroll-graphic {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.scroll-text {
+  position: relative;
+}
+.step {
+  margin-bottom: 60vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+}
+.scene-img {
+  max-height: 100vh;
+}
+.bird {
+  position: absolute;
+  left: 0;
+  bottom: 70%;
+  width: 100px;
+  transition: 1.5s;
 }
