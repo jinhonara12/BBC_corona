@@ -1,11 +1,14 @@
 (() => {
     
     const actions = {
-        birdFlies(){
-            document.querySelector('[data-index="2"] .bird').style.transform= `translateX(${window.innerWidth}px)`
+        birdFlies(key){
+            if(key){
+            document.querySelector('[data-index="1"] .bird').style.transform= `translateX(${window.innerWidth}px`
+            }else{
+                document.querySelector('[data-index="1"] .bird').style.transform= `translateX(-100%)`
+            }
         }
     }
-    console.log(actions)
 
     const stepElems = document.querySelectorAll('.step');
     const graphicElems = document.querySelectorAll('.graphic-item');
@@ -26,11 +29,14 @@
     function activated(action){
         currentItem.classList.add('visible');
         if(action){
-            actions[action]();
+            actions[action](true);
         }
     }
-    function inactivated(){
+    function inactivated(action){
         currentItem.classList.remove('visible')
+        if(action){
+            actions[action](false);
+        }
     }
 
     window.addEventListener('scroll', () => {
